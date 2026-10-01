@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "status": "planning_only_unquoted",
+  "project": "support-reply-assistant",
+  "checkpoint_hash": null,
+  "training_path": null,
+  "gpu_model": null,
+  "gpu_count": 1,
+  "gpu_vram_gb_each": null,
+  "host_ram_gb": null,
+  "cpu_model": null,
+  "cpu_physical_cores": null,
+  "cloud_vcpu_count": null,
+  "free_working_storage_gb": null,
+  "quote": {
+    "provider_or_supplier": null,
+    "date": null,
+    "region": null,
+    "currency": null,
+    "rate_unit": null,
+    "hourly_rate": null,
+    "source_url": null
+  },
+  "estimate": {
+    "allocated_hours": null,
+    "experiment_count": null,
+    "additional_storage_cost": null,
+    "transfer_cost": null,
+    "tax_cost": null,
+    "review_labor_cost": null,
+    "contingency_fraction": 0.2,
+    "exchange_rate": null,
+    "exchange_rate_date": null,
+    "estimated_total": null
+  },
+  "measured": {
+    "peak_vram_gb": null,
+    "peak_ram_gb": null,
+    "training_tokens_per_second": null,
+    "checkpoint_gb": null,
+    "actual_hours": null,
+    "actual_invoice_total": null
+  },
+  "local_purchase": {
+    "currency": null,
+    "gpu": null,
+    "cpu": null,
+    "ram": null,
+    "motherboard_chassis": null,
+    "nvme_backup": null,
+    "psu_cooling": null,
+    "tax_shipping_support": null,
+    "total": null
+  },
+  "note": "Null means unknown. No provider, hardware purchase, training job or cloud upload is selected. Templates are not runtime configs."
+}

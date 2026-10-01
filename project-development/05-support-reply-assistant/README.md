@@ -8,6 +8,7 @@ Help support teams import approved help articles and selected tickets, summarize
 
 ## Delivery documents
 
+- [AI dataset, model configuration, training and quality guidance](AI-dataset-training-guidance/README.md)
 - [Status: 21 planned sprints](_STATUS.md)
 - [Roadmap: six conditional core PIs and one optional improvement PI](PI/README.md)
 - [Scope and investigation gates](docs/01-product-scope.md)

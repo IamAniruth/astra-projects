@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "document_kind": "planning_only_not_astra_runtime_config",
+  "status": "proposed_unqualified",
+  "project": "support-reply-assistant",
+  "warning": "Do not pass this file to Astra CLI. Unknown values and suggested fields require explicit mapping to verified runtime/trainer contracts.",
+  "model": {
+    "checkpoint_path": null,
+    "checkpoint_sha256": null,
+    "tokenizer_sha256": null,
+    "total_parameters": null,
+    "trainable_parameters": null,
+    "trained_context_tokens": null,
+    "qualified_context_tokens": null,
+    "candidate_dense_parameter_tiers": [
+      3000000000,
+      7000000000,
+      8000000000
+    ],
+    "architecture_compatible": null
+  },
+  "hardware": {
+    "gpu_model": null,
+    "gpu_vram_gb": null,
+    "ram_gb": null,
+    "os": null,
+    "driver": null,
+    "measured_peak_vram_gb": null,
+    "minimum_observed_headroom_fraction": 0.2
+  },
+  "precision": {
+    "reference_execution": "inspect_actual_path_fp32_baseline",
+    "storage_scheme": null,
+    "compute_dtype": null,
+    "kv_cache_dtype": null,
+    "optimizer_state_dtype": null,
+    "native_int4_is_packed": false,
+    "native_quantized_loader_restores_fp32": true,
+    "nf4_awq_integration_qualified": false
+  },
+  "training_experiment": {
+    "method_candidate": "lora_after_baseline",
+    "initial_reviewed_training_examples": 10000,
+    "minimum_validation_cases": 2000,
+    "learning_rate_candidates": [
+      0.00005,
+      0.0001,
+      0.0002
+    ],
+    "rank_candidates": [
+      8,
+      16
+    ],
+    "alpha_policy": "2_times_rank_verify_convention",
+    "native_adapted_modules": [
+      "query",
+      "value"
+    ],
+    "effective_batch_sequences": 32,
+    "epochs_initial": 1,
+    "epochs_max_candidate": 3,
+    "max_sequence_length": null,
+    "seed_candidates": [
+      42,
+      43,
+      44
+    ],
+    "masking_verified": false,
+    "train_dataset_hash": null,
+    "validation_dataset_hash": null,
+    "dataset_recipe": "dataset-mixture.json",
+    "planned_collection_records": 20000,
+    "planned_representative_release_cases": 3000,
+    "planned_targeted_challenge_cases": 2000,
+    "first_hypothesis": {
+      "status": "proposed_not_executed",
+      "lora_rank": 16,
+      "lora_alpha": 32,
+      "learning_rate": 0.0001,
+      "microbatch_sequences": 1,
+      "gradient_accumulation_steps": 32,
+      "data_parallel_workers": 1,
+      "effective_batch_sequences": 32,
+      "epochs_initial": 1,
+      "epochs_max_if_validation_improves": 3,
+      "validation_interval_optimizer_updates_main_run": 25,
+      "sequence_length": "must_fit_trained_and_qualified_context",
+      "precision_policy": "verify_native_fp32_reference_then_compare_bf16_if_path_and_device_qualified",
+      "actual_precision": null
+    },
+    "data_size_experiments": {
+      "same_base_for_comparison": true,
+      "subset_sizes": [
+        1000,
+        3000,
+        10000
+      ],
+      "counting_assumptions": "one sequence per record, no replacement or packing, no dropped data, effective batch 32, normalized final partial update flushed each epoch",
+      "optimizer_updates_by_records": [
+        {
+          "records": 1000,
+          "one_epoch": 32,
+          "two_epochs": 64,
+          "three_epochs": 96
+        },
+        {
+          "records": 3000,
+          "one_epoch": 94,
+          "two_epochs": 188,
+          "three_epochs": 282
+        },
+        {
+          "records": 10000,
+          "one_epoch": 313,
+          "two_epochs": 626,
+          "three_epochs": 939
+        },
+        {
+          "records": 12000,
+          "one_epoch": 375,
+          "two_epochs": 750,
+          "three_epochs": 1125
+        },
+        {
+          "records": 13000,
+          "one_epoch": 407,
+          "two_epochs": 814,
+          "three_epochs": 1221
+        }
+      ],
+      "native_step_semantics_verified": false
+    }
+  },
+  "application_candidates": {
+    "summary_max_new_tokens": 256,
+    "draft_max_new_tokens": 512,
+    "current_chat_api_max_new_tokens": 1024,
+    "context_fit_verified": false,
+    "retrieval_top_k": 4,
+    "concurrency_initial": 1,
+    "deadline_seconds": 60,
+    "temperature": null,
+    "top_p": null,
+    "sampling_note": "temperature/top_p are not supported by inspected native chat request schema",
+    "human_approval_required": true,
+    "auto_send_enabled": false,
+    "live_facts_connector_qualified": false
+  },
+  "qualification": {
+    "all_quality_gates_passed": false,
+    "owners_preregistered_thresholds": false,
+    "release_evidence": null
+  }
+}

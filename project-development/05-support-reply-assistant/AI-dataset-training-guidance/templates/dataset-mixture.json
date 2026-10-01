@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "recipe_version": "sr-support-pilot-v1",
+  "document_kind": "proposed_recipe_not_native_astra_config",
+  "project": "support-reply-assistant",
+  "status": "proposed_no_data_collected",
+  "denominator_notes": {
+    "training_dimensions": "Each percentage dimension independently describes the same 10000 unique accepted training records; never add dimensions together.",
+    "collection": "20000 accepted disjoint records; representative_release requires independent case-level opportunities.",
+    "tokens": "Record percentages are not input-token or target-loss-token proportions."
+  },
+  "training_records": 10000,
+  "collection_records": 20000,
+  "primary_skill": [
+    {
+      "id": "case_summaries",
+      "percent": 20,
+      "records": 2000,
+      "add_for_2000": 400,
+      "add_for_3000": 600
+    },
+    {
+      "id": "grounded_reply_drafts",
+      "percent": 35,
+      "records": 3500,
+      "add_for_2000": 700,
+      "add_for_3000": 1050
+    },
+    {
+      "id": "clarification_missing_evidence",
+      "percent": 15,
+      "records": 1500,
+      "add_for_2000": 300,
+      "add_for_3000": 450
+    },
+    {
+      "id": "policy_exceptions",
+      "percent": 10,
+      "records": 1000,
+      "add_for_2000": 200,
+      "add_for_3000": 300
+    },
+    {
+      "id": "privacy_injection",
+      "percent": 10,
+      "records": 1000,
+      "add_for_2000": 200,
+      "add_for_3000": 300
+    },
+    {
+      "id": "structured_case_extraction",
+      "percent": 5,
+      "records": 500,
+      "add_for_2000": 100,
+      "add_for_3000": 150
+    },
+    {
+      "id": "multi_turn_corrections",
+      "percent": 5,
+      "records": 500,
+      "add_for_2000": 100,
+      "add_for_3000": 150
+    }
+  ],
+  "primary_topic": [
+    {
+      "id": "product_setup_errors",
+      "percent": 30,
+      "records": 3000
+    },
+    {
+      "id": "account_access",
+      "percent": 15,
+      "records": 1500
+    },
+    {
+      "id": "billing_refunds",
+      "percent": 20,
+      "records": 2000
+    },
+    {
+      "id": "orders_delivery",
+      "percent": 15,
+      "records": 1500
+    },
+    {
+      "id": "returns_warranty",
+      "percent": 10,
+      "records": 1000
+    },
+    {
+      "id": "unresolved_escalation",
+      "percent": 10,
+      "records": 1000
+    }
+  ],
+  "provenance_category": [
+    {
+      "id": "real_permitted_reviewed",
+      "percent": 60,
+      "records": 6000
+    },
+    {
+      "id": "expert_authored_from_approved_sources",
+      "percent": 25,
+      "records": 2500
+    },
+    {
+      "id": "reviewed_synthetic",
+      "percent": 15,
+      "records": 1500
+    }
+  ],
+  "collection_allocation": [
+    {
+      "id": "training",
+      "percent": 50,
+      "records": 10000
+    },
+    {
+      "id": "validation",
+      "percent": 10,
+      "records": 2000
+    },
+    {
+      "id": "representative_release",
+      "percent": 15,
+      "records": 3000
+    },
+    {
+      "id": "development",
+      "percent": 10,
+      "records": 2000
+    },
+    {
+      "id": "quantization_calibration_reserve",
+      "percent": 5,
+      "records": 1000
+    },
+    {
+      "id": "targeted_challenge",
+      "percent": 10,
+      "records": 2000
+    }
+  ],
+  "constraints": {
+    "one_primary_label_per_dimension": true,
+    "source_group_isolation_required": true,
+    "representative_release_follows_workload_not_training_mix": true,
+    "release_critical_zero_failures_min_independent_cases": 2995,
+    "calibration_optional_for_native_weight_only_path": true,
+    "unrelated_general_tasks_percent": 0,
+    "initial_language": "one_language_to_be_selected",
+    "topic_scope": "product_support_with_orders_billing_hypothesis_confirm_before_collection",
+    "all_data_independently_reviewed": true
+  },
+  "incremental_plan": {
+    "new_training_records_min": 2000,
+    "new_training_records_max": 3000,
+    "percent_of_initial_training_min": 20,
+    "percent_of_initial_training_max": 30,
+    "batch_rebalancing_source": "development_and_validation_failures_not_hidden_release_set"
+  },
+  "learning_group_view": {
+    "status": "proposed_regrouping_same_training_records",
+    "notes": "One learning group per record. Grounded replies split into 1500 knowledge-use and 2000 communication examples; other primary quotas are unchanged.",
+    "groups": [
+      {
+        "id": "comprehension_and_extraction",
+        "percent": 25,
+        "records": 2500,
+        "primary_allocations": {
+          "case_summaries": 2000,
+          "structured_case_extraction": 500
+        }
+      },
+      {
+        "id": "knowledge_use",
+        "percent": 15,
+        "records": 1500,
+        "primary_allocations": {
+          "grounded_reply_drafts": 1500
+        }
+      },
+      {
+        "id": "reply_communication",
+        "percent": 20,
+        "records": 2000,
+        "primary_allocations": {
+          "grounded_reply_drafts": 2000
+        }
+      },
+      {
+        "id": "reasoning_and_verification",
+        "percent": 30,
+        "records": 3000,
+        "primary_allocations": {
+          "clarification_missing_evidence": 1500,
+          "policy_exceptions": 1000,
+          "multi_turn_corrections": 500
+        }
+      },
+      {
+        "id": "privacy_and_boundaries",
+        "percent": 10,
+        "records": 1000,
+        "primary_allocations": {
+          "privacy_injection": 1000
+        }
+      }
+    ]
+  }
+}

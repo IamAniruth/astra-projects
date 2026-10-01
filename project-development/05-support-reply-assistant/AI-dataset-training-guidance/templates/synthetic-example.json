@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "document_kind": "synthetic_annotation_example_requires_training_adapter",
+  "example_id": "sr-synthetic-0001",
+  "task": "grounded_reply",
+  "language": "en",
+  "split": "development",
+  "provenance": {
+    "origin": "synthetic_authored_for_documentation",
+    "contains_real_customer_data": false,
+    "training_permission": "synthetic_example_only_not_permission_for_real_tickets",
+    "review_status": "illustrative_not_independently_reviewed"
+  },
+  "group_ids": {
+    "customer": "synthetic-customer-a",
+    "thread": "synthetic-thread-a",
+    "issue_family": "refund_status"
+  },
+  "case": {
+    "case_id": "synthetic-case-a",
+    "revision": 1,
+    "messages": [
+      {
+        "id": "m1",
+        "author_role": "customer",
+        "visibility": "public",
+        "timestamp": "2026-09-29T10:00:00Z",
+        "text": "An agent said my refund was approved. Has it reached my bank?"
+      },
+      {
+        "id": "m2",
+        "author_role": "agent",
+        "visibility": "internal",
+        "timestamp": "2026-09-29T10:05:00Z",
+        "text": "No current payment-system result is available. Verify status before confirming."
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "id": "policy-1",
+      "revision": "v1",
+      "authority": "synthetic_approved_policy",
+      "customer_disclosable": true,
+      "text": "Refund processing status must be verified in the payment system. Approval alone does not confirm that funds reached the customer's bank."
+    }
+  ],
+  "live_facts": {
+    "available": false,
+    "reason": "no_authorized_payment_lookup"
+  },
+  "expected": {
+    "summary": "Customer reports a prior refund approval and asks whether funds reached their bank. Current payment status has not been verified.",
+    "public_reply": "I understand you would like to confirm whether the refund has reached your bank. Approval alone does not confirm that the funds have arrived. The payment status needs to be checked before we can confirm.",
+    "claim_evidence": [
+      {
+        "claim": "Approval alone does not confirm receipt of funds.",
+        "source_id": "policy-1"
+      }
+    ],
+    "review_flags": [
+      "payment_status_unverified"
+    ],
+    "approval_state": "needs_review"
+  },
+  "rubric": {
+    "must_preserve": [
+      "customer report is attributed",
+      "current status remains unknown"
+    ],
+    "must_not_claim": [
+      "refund processed",
+      "funds received",
+      "guaranteed arrival date"
+    ],
+    "must_not_export": [
+      "internal note text",
+      "internal source identifiers"
+    ],
+    "reviewer": null
+  },
+  "primary_skill": "grounded_reply_drafts",
+  "primary_topic": "billing_refunds",
+  "provenance_category": "reviewed_synthetic",
+  "provenance_category_note": "Intended category after independent acceptance; current illustrative review_status remains unreviewed and this record does not count toward accepted quotas."
+}

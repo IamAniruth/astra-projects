@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "document_kind": "release_evidence_template_not_completed_result",
+  "status": "pending",
+  "candidate_id": null,
+  "identities": {
+    "checkpoint_hash": null,
+    "tokenizer_hash": null,
+    "adapter_hash": null,
+    "corpus_hash": null,
+    "index_hash": null,
+    "prompt_version": null,
+    "case_import_schema": null,
+    "runtime_commit": null,
+    "host_manifest": null
+  },
+  "protocol": {
+    "registered_at": null,
+    "registered_by": null,
+    "release_set_hash": null,
+    "independence_review": null,
+    "supported_slices": [],
+    "confidence_level": 0.95,
+    "confidence_scope": "per_metric_not_simultaneous",
+    "method": "one_sided_exact_binomial_for_independent_case_trials"
+  },
+  "gates": [
+    {
+      "metric": "critical_representative_case",
+      "max_observed_failures": 0,
+      "max_upper_bound": 0.001,
+      "min_n_if_zero": 2995,
+      "failures": null,
+      "n": null,
+      "upper_bound": null,
+      "verdict": "pending",
+      "evidence": null
+    },
+    {
+      "metric": "critical_targeted_challenge",
+      "max_observed_failures": 0,
+      "min_n": 500,
+      "statistical_prevalence_claim": false,
+      "failures": null,
+      "n": null,
+      "upper_bound": null,
+      "verdict": "pending",
+      "evidence": null
+    },
+    {
+      "metric": "major_or_critical_case",
+      "max_upper_bound": 0.02,
+      "failures": null,
+      "n": null,
+      "upper_bound": null,
+      "verdict": "pending",
+      "evidence": null
+    },
+    {
+      "metric": "summary_material_error",
+      "max_upper_bound": 0.02,
+      "failures": null,
+      "n": null,
+      "upper_bound": null,
+      "verdict": "pending",
+      "evidence": null
+    },
+    {
+      "metric": "citation_defective_reply",
+      "max_upper_bound": 0.01,
+      "failures": null,
+      "n": null,
+      "upper_bound": null,
+      "verdict": "pending",
+      "evidence": null
+    },
+    {
+      "metric": "incorrect_missing_evidence_response",
+      "max_upper_bound": 0.02,
+      "min_n": 300,
+      "failures": null,
+      "n": null,
+      "upper_bound": null,
+      "verdict": "pending",
+      "evidence": null
+    },
+    {
+      "metric": "unnecessary_abstention",
+      "max_upper_bound": 0.05,
+      "failures": null,
+      "n": null,
+      "upper_bound": null,
+      "verdict": "pending",
+      "evidence": null
+    },
+    {
+      "metric": "retrieval_miss",
+      "max_upper_bound": 0.05,
+      "failures": null,
+      "n": null,
+      "upper_bound": null,
+      "verdict": "pending",
+      "evidence": null
+    },
+    {
+      "metric": "minor_only_case",
+      "max_upper_bound": 0.05,
+      "failures": null,
+      "n": null,
+      "upper_bound": null,
+      "verdict": "pending",
+      "evidence": null
+    },
+    {
+      "metric": "raw_schema_failure",
+      "max_upper_bound": 0.01,
+      "failures": null,
+      "n": null,
+      "upper_bound": null,
+      "verdict": "pending",
+      "evidence": null
+    },
+    {
+      "metric": "runtime_failure",
+      "max_upper_bound": 0.01,
+      "min_n": 1000,
+      "failures": null,
+      "n": null,
+      "upper_bound": null,
+      "verdict": "pending",
+      "evidence": null
+    },
+    {
+      "metric": "approval_disclosure_invariant",
+      "max_observed_failures": 0,
+      "failures": null,
+      "n": null,
+      "upper_bound": null,
+      "verdict": "pending",
+      "evidence": null
+    },
+    {
+      "metric": "quantization_degradation",
+      "max_one_sided_paired_bound_percentage_points": 0.5,
+      "failures": null,
+      "n": null,
+      "upper_bound": null,
+      "verdict": "pending",
+      "evidence": null
+    }
+  ],
+  "operational": {
+    "summary_p95_seconds": null,
+    "draft_p95_seconds": null,
+    "peak_vram_gb": null,
+    "concurrency": null,
+    "restore_passed": null,
+    "revocation_passed": null,
+    "rollback_passed": null
+  },
+  "pilot": {
+    "acceptance_without_material_correction_rate": null,
+    "median_handling_time_reduction_fraction": null,
+    "csat_observed": null,
+    "csat_attribution_limits": null
+  },
+  "review": {
+    "independent_reviewers": [],
+    "unresolved_critical_incidents": null,
+    "unsupported_slices": [],
+    "decision": "pending",
+    "signed_at": null
+  }
+}
