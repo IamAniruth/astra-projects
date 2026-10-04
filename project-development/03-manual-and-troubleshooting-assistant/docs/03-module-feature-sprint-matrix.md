@@ -25,5 +25,10 @@ Each module links to detailed F01/F02 scope, T01-T04 tasks and acceptance checks
 | M19 | Governed feedback and knowledge updates | MT-S19-F01/F02 | [S19](../PI/PI-07-controlled-improvement/S19-governed-feedback/sprint-plan.md) | Planned |
 | M20 | Evaluated retrieval and model improvement | MT-S20-F01/F02 | [S20](../PI/PI-07-controlled-improvement/S20-evaluated-improvement/sprint-plan.md) | Planned |
 | M21 | Qualified equipment and modality expansion | MT-S21-F01/F02 | [S21](../PI/PI-07-controlled-improvement/S21-qualified-expansion/sprint-plan.md) | Planned |
+| M22 | Admin sites, equipment and access | MT-S22-F01/F02 | [S22](../PI/PI-08-admin-panel/S22-admin-sites-equipment-access/sprint-plan.md) | Planned |
+| M23 | Admin manual and procedure governance | MT-S23-F01/F02 | [S23](../PI/PI-08-admin-panel/S23-admin-manual-procedure-governance/sprint-plan.md) | Planned |
+| M24 | Admin commerce and operational readiness | MT-S24-F01/F02 | [S24](../PI/PI-08-admin-panel/S24-admin-commercial-operations/sprint-plan.md) | Planned |
+
+M22-M24 implement the [admin specification](09-admin-panel-specification.md) through [PI-08](../PI/PI-08-admin-panel/README.md). They own administration surfaces and integrated verification over existing services rather than duplicate source approval, applicability, procedure, job or billing authorities.
 
 Source approval, equipment applicability, permissions, citations and failure handling apply wherever answers or documents are handled. Source withdrawal applies to active jobs, histories, caches and procedure sessions. New model/parser/index configurations require relevant re-evaluation; feedback alone cannot publish an approved procedure.

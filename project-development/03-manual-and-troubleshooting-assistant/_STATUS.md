@@ -1,6 +1,6 @@
 # MT PI and sprint status
 
-Updated: 1 October 2026. **Documentation prepared; application implementation has not started.** Priority: Investigate first. No buyer interviews, manual ingestion, retrieval/answer benchmarks, installations or upstream test reruns were performed for this plan.
+Updated: 4 October 2026. **Documentation prepared; application implementation has not started.** Priority: Investigate first. There are 24 planned sprints, including PI-08 administration. No buyer interviews, manual ingestion, retrieval/answer benchmarks, installations or upstream test reruns were performed for this plan.
 
 Legend: Planned / In progress / Blocked / Accepted. Acceptance requires evidence and reviewer decision. Upstream Astra completion never transfers to this product.
 
@@ -27,6 +27,11 @@ Legend: Planned / In progress / Blocked / Accepted. Acceptance requires evidence
 | PI-07 | [S19](PI/PI-07-controlled-improvement/S19-governed-feedback/sprint-plan.md) | Governed feedback and knowledge updates | Planned |
 | PI-07 | [S20](PI/PI-07-controlled-improvement/S20-evaluated-improvement/sprint-plan.md) | Evaluated retrieval and model improvement | Planned |
 | PI-07 | [S21](PI/PI-07-controlled-improvement/S21-qualified-expansion/sprint-plan.md) | Qualified equipment and modality expansion | Planned |
+| PI-08 | [S22](PI/PI-08-admin-panel/S22-admin-sites-equipment-access/sprint-plan.md) | Admin sites, equipment and access | Planned |
+| PI-08 | [S23](PI/PI-08-admin-panel/S23-admin-manual-procedure-governance/sprint-plan.md) | Admin manual and procedure governance | Planned |
+| PI-08 | [S24](PI/PI-08-admin-panel/S24-admin-commercial-operations/sprint-plan.md) | Admin commerce and operational readiness | Planned |
+
+PI-08 reuses existing domain services and does not depend on optional PI-07. Required administration controls precede the S17 paid pilot; S18 consumes final readiness evidence. See [PI-08 scheduling](PI/PI-08-admin-panel/README.md). All statuses remain Planned.
 
 ## Open gates
 
