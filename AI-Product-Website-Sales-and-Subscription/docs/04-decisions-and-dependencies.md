@@ -24,6 +24,23 @@ For each existing EQ or other product capability, record: product sprint/commit,
 
 The product may not yet have application code. That blocks real S11 integration and paid launch, not completion of these planning documents. Do not narrow the useful-product promise silently to a marketing site or mock dashboard.
 
+## Model size planning estimate (2026-10-04)
+
+Planning estimate, not a selection or measurement. Source: [Model size and training time guide](../../../astra-llm/codebase/command-documentation/14-MODEL_SIZE_AND_TRAINING_TIME_GUIDE.md), section 10.
+
+The website, offers, billing, usage and admin modules need no LLM; they are an ordinary web application. Model size depends on the product sold through the site:
+
+| Product | Minimum workable | Comfortable for paying customers |
+|---|---|---|
+| Website, billing, admin | 0 | 0 |
+| Enquiry-to-quotation (first product) | about 100-350 M, extraction-only training | 1-3 B |
+| Invoice processing | about 350 M-1 B | 1-3 B |
+| Manual / troubleshooting | about 1 B | 3-8 B |
+| Company knowledge assistant | about 1-3 B | 7-8 B |
+| Support reply assistant | about 3 B | 7-8 B or more |
+
+The model, hardware and hosting decisions remain open; launching one narrow product first keeps the required model small. S11/S17 still need the real selected workload and quality evidence.
+
 ## Deferred choices
 
 Additional payment providers/migration automation, annual/bundled offers beyond validated need, automatic overages, multi-product catalogue, bulk retry, visual website editor, automated campaigns, private-installation automation and regional multi-deployment are separate later scopes.

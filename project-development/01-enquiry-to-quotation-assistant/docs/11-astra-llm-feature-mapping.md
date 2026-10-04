@@ -153,6 +153,15 @@ Published manifest operations include `POST /v1/chat`, `POST /v1/generate`, `GET
 
 The product owns its business workflow and customer allowance ledger. Astra owns its accepted remote job and runtime budget. Persist both IDs and a correlation ID. Reconcile remote uncertain outcomes before replay. Do not run one AI task under two competing worker authorities. A product Node worker/queue is optional for product-owned parsing/export/email only, with a documented boundary.
 
+## Model size planning estimate (2026-10-04)
+
+Planning estimate, not a measurement or a qualification. Source: [Model size and training time guide](../../../../astra-llm/codebase/command-documentation/14-MODEL_SIZE_AND_TRAINING_TIME_GUIDE.md), section 10.
+
+- **Task the model owns:** extract line items (product, quantity, unit, specification, exclusions) from enquiry emails and PDFs. Catalogue matching is retrieval (A05); quote money is deterministic product logic (A06); a person approves every quotation.
+- **Size estimate:** about 100-350 M parameters may be workable if trained only on this extraction task with many examples; 1-3 B is comfortable for paying customers. The currently served Astra checkpoint (`checkpoint-dolly-54m-12k`, 53.9 M, general instruction data, 512-token context) is not expected to qualify.
+- **Owner direction:** Astra's own from-scratch model, small budget, one 6 GB GPU (GTX 1660 Ti, ceiling about 1.25 B for training). Path: collect enquiry -> line-item examples for one customer group (real where available, synthetic from the catalogue); pretrain an Astra model of about 100-200 M on licensed general text; fine-tune it on extraction only; measure on held-out product fixtures (A09); step up to about 1 B on rented compute only if the measurement falls short.
+- **Release effect:** none. The S08/S17 dependency below is unchanged: launch waits for the selected checkpoint to pass the registered product gates, whatever its size.
+
 ## Explicit release dependencies
 
 - Qualified selected checkpoint for quotation extraction, supported languages and context sizes: S08/S17.
