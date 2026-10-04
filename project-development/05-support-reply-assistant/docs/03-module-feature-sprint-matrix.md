@@ -1,6 +1,6 @@
 # Module and feature coverage
 
-Each module links to detailed F01/F02 scope, T01-T04 tasks and acceptance checks. This is planning coverage, not implementation evidence.
+Each module links to detailed F01/F02 scope, numbered tasks and acceptance checks. This is planning coverage, not implementation evidence. M22-M24 own admin UI and integration over existing domain services rather than duplicating M03-M18 service ownership.
 
 | Module | Responsibility | Features | Sprint | Status |
 |---|---|---|---|---|
@@ -25,5 +25,8 @@ Each module links to detailed F01/F02 scope, T01-T04 tasks and acceptance checks
 | M19 | Governed corrections and examples | SR-S19-F01/F02 | [S19](../PI/PI-07-controlled-improvement/S19-governed-feedback/sprint-plan.md) | Planned |
 | M20 | Evaluated model and retrieval improvement | SR-S20-F01/F02 | [S20](../PI/PI-07-controlled-improvement/S20-evaluated-improvement/sprint-plan.md) | Planned |
 | M21 | Qualified help-desk and fact integrations | SR-S21-F01/F02 | [S21](../PI/PI-07-controlled-improvement/S21-qualified-integrations/sprint-plan.md) | Planned |
+| M22 | Admin access, teams and workspace onboarding | SR-S22-F01/F02 | [S22](../PI/PI-08-admin-panel/S22-admin-access-workspaces/sprint-plan.md) | Planned |
+| M23 | Admin knowledge publication and reply governance | SR-S23-F01/F02 | [S23](../PI/PI-08-admin-panel/S23-admin-knowledge-governance/sprint-plan.md) | Planned |
+| M24 | Admin commerce, recovery and operational readiness | SR-S24-F01/F02 | [S24](../PI/PI-08-admin-panel/S24-admin-commercial-operations/sprint-plan.md) | Planned |
 
 Customer isolation, attribution, disclosure, freshness and typed failures apply throughout. New case messages, policy changes and expired facts invalidate dependent approvals. New model/retrieval configurations require evaluation; accepted drafts never automatically become policy or training examples.

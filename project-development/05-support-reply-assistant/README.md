@@ -9,8 +9,9 @@ Help support teams import approved help articles and selected tickets, summarize
 ## Delivery documents
 
 - [AI dataset, model configuration, training and quality guidance](AI-dataset-training-guidance/README.md)
-- [Status: 21 planned sprints](_STATUS.md)
-- [Roadmap: six conditional core PIs and one optional improvement PI](PI/README.md)
+- [Status: 24 planned sprints](_STATUS.md)
+- [Roadmap: six conditional core PIs, one optional improvement PI and one admin PI](PI/README.md)
+- [PI-08: Admin panel delivery, S22-S24](PI/PI-08-admin-panel/README.md)
 - [Scope and investigation gates](docs/01-product-scope.md)
 - [Architecture and setup prerequisites](docs/02-architecture-and-setup.md)
 - [Module, feature and sprint coverage](docs/03-module-feature-sprint-matrix.md)
@@ -19,6 +20,7 @@ Help support teams import approved help articles and selected tickets, summarize
 - [Quality, privacy, security and operations](docs/06-quality-security-operations.md)
 - [Astra source and capability mapping](docs/07-astra-llm-feature-mapping.md)
 - [Decisions, risks and references](docs/08-decisions-and-references.md)
+- [Admin panel: workspace controls, platform operations and sprint mapping](docs/09-admin-panel-specification.md)
 - [Investigation and acceptance templates](templates/README.md)
 
 This follows the structure of [project 04](../04-company-knowledge-assistant/README.md) and the earlier plans. Planning baseline: React + TypeScript screens, Next.js business APIs and private Astra Python runtime; validate exact choices in S02.
