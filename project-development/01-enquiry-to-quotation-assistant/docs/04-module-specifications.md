@@ -23,7 +23,7 @@ The detailed [module/feature/sprint matrix](12-module-feature-sprint-matrix.md) 
 | [M15](#m15-subscriptions-and-entitlements) | Subscriptions and entitlements | S07, S14, S18 |
 | [M16](#m16-public-website-and-onboarding) | Public website and onboarding | S13, S15 |
 | [M17](#m17-international-and-market-settings) | International and market settings | S03, S05, S15, S21 |
-| [M18](#m18-administration-and-customer-support) | Administration and customer support | S13, S16, S18 |
+| [M18](#m18-administration-and-customer-support) | Administration and customer support | S13, S16, S18, S22-S24 |
 | [M19](#m19-security-quality-and-evaluation) | Security, quality and evaluation | S01, S02, S03, S04, S05, S06, S07, S08, S09, S10, S11, S12, S13, S14, S15, S16, S17, S18, S19, S20, S21 |
 | [M20](#m20-deployment-and-release-operations) | Deployment and release operations | S01, S16, S17, S18, S20, S21 |
 | [M21](#m21-governed-feedback-and-model-improvement) | Governed feedback and model improvement | S17, S19, S20, S21 |
@@ -171,7 +171,7 @@ The detailed [module/feature/sprint matrix](12-module-feature-sprint-matrix.md) 
 - **React frontend:** Redacted operational dashboard, support requests and owner data-management screen.
 - **Next.js/backend and worker:** Platform-specific authorization, audited support access, cost metrics, scoped export/deletion orchestration.
 - **Acceptance:** Normal owner cannot enter platform admin; operators do not receive full documents by default; support cases are scoped.
-- **Sprint ownership:** S13, S16, S18.
+- **Sprint ownership:** S13, S16, S18 and S22-S24. Earlier sprints retain domain/operations services; [PI-08](../PI/PI-08-admin-panel/README.md) delivers administration screens and integrated verification under the [admin specification](13-admin-panel-specification.md).
 
 ## M19 Security, quality and evaluation
 

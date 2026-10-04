@@ -10,8 +10,10 @@ Build a product that lets a distributor import its catalogue, receive an enquiry
 
 ## Primary delivery documents
 
-- [PI and sprint status: all 21 sprints](./_STATUS.md)
-- [PI roadmap: six core PIs plus one optional improvement PI](PI/README.md)
+- [PI and sprint status: all 24 sprints](./_STATUS.md)
+- [PI roadmap: six core PIs, one optional improvement PI and one admin PI](PI/README.md)
+- [Admin panel specification](docs/13-admin-panel-specification.md)
+- [PI-08 administration and S22-S24 sprint plans](PI/PI-08-admin-panel/README.md)
 - [Module, feature and sprint coverage matrix](docs/12-module-feature-sprint-matrix.md)
 - [Astra LLM reference mapping and release dependencies](docs/11-astra-llm-feature-mapping.md)
 
@@ -46,12 +48,13 @@ The setup guide and [templates](templates/README.md) are optional background app
 | [PI-05](PI/PI-05-commerce-international/README.md) | Website, billing, verified market configuration | S13-S15 | Commercial staging candidate |
 | [PI-06](PI/PI-06-production-launch/README.md) | Operations, pilot validation, release | S16-S18 | Supported-market production launch |
 | [PI-07](PI/PI-07-controlled-improvement/README.md) | Governed feedback, model improvement, qualified expansion | S19-S21 | Optional post-launch improvements |
+| [PI-08](PI/PI-08-admin-panel/README.md) | Workspace access, catalogue/quote governance and commercial operations | S22-S24 | Integrated administration readiness |
 
-Planning assumption: three two-week sprints per PI, or 36 nominal weeks for the six core PIs plus six optional weeks for PI-07. This is a scope-sizing aid, not a delivery commitment. Staffing, skills, model capability, and available time are unknown. Re-estimate after S01 and every PI. A controlled internal demonstration is possible before all commercial features are complete. A paid assisted pilot requires appropriate commercial and operational readiness even if checkout remains manual.
+Planning assumption: three two-week sprints per PI. The original six core PIs plus the admin PI represent 42 nominal sequential weeks, plus six optional weeks for PI-07. This is a scope-sizing aid, not a delivery commitment. PI-08 reuses existing services and overlaps their delivery; required controls precede the S17 paid pilot rather than waiting until after launch. Re-estimate staffing and overlap after S01 and every PI.
 
 ## Planning conventions
 
-- Module IDs M01-M22 and sprint IDs S01-S21 are stable references; features use EQ-Sxx-F01/F02 and tasks/acceptance have explicit IDs.
+- Module IDs M01-M22 and sprint IDs S01-S24 are stable references; features use EQ-Sxx-F01/F02 and tasks/acceptance have explicit IDs. PI-08 extends M18 and related existing modules.
 - Every sprint file specifies tasks, dependencies, acceptance checks, and demonstration evidence.
 - All work starts as **Planned**. Checkboxes and statuses must be updated only from actual evidence.
 - Each sprint links back to the detailed module specification and global quality requirements.
@@ -59,5 +62,5 @@ Planning assumption: three two-week sprints per PI, or 36 nominal weeks for the 
 - Country settings, interface language, document currency, and subscription billing currency are separate.
 - Later products are out of scope.
 
-Business context: [Product opportunities](../../AI-Product-Opportunities-2026-2030.md) and [Website sales plan](../../AI-Product-Website-Sales-and-Subscription-Summary.md).
+Business context: [Product opportunities](../../AI-Product-Opportunities-2026-2030.md) and [Website sales plan](../../AI-Product-Website-Sales-and-Subscription/AI-Product-Website-Sales-and-Subscription-Summary.md).
 

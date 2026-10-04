@@ -1,6 +1,6 @@
 # EQ PI and sprint status
 
-Updated: 30 September 2026. **Documentation prepared; application implementation has not started.**
+Updated: 4 October 2026. **Documentation prepared; application implementation has not started.** There are 24 planned sprints including PI-08 administration.
 
 This status concerns the Enquiry-to-Quotation product, not the Astra platform. Upstream recorded completion is not transferred to EQ. No historical Astra test suite was rerun for this plan.
 
@@ -29,6 +29,11 @@ Legend: Planned / In progress / Blocked / Accepted. All rows begin Planned. Chan
 | PI-07 | [S19](PI/PI-07-controlled-improvement/S19-consented-feedback/sprint-plan.md) | Consented feedback and governed memory | Planned |
 | PI-07 | [S20](PI/PI-07-controlled-improvement/S20-model-improvement/sprint-plan.md) | Evaluated model improvement and reversible release | Planned |
 | PI-07 | [S21](PI/PI-07-controlled-improvement/S21-qualified-expansion/sprint-plan.md) | Qualified retrieval, artifacts and market expansion | Planned |
+| PI-08 | [S22](PI/PI-08-admin-panel/S22-admin-access-workspaces/sprint-plan.md) | Admin access and workspace management | Planned |
+| PI-08 | [S23](PI/PI-08-admin-panel/S23-admin-catalogue-quote-governance/sprint-plan.md) | Admin catalogue and quotation governance | Planned |
+| PI-08 | [S24](PI/PI-08-admin-panel/S24-admin-commercial-operations/sprint-plan.md) | Admin commerce and operational readiness | Planned |
+
+PI-08 reuses existing domain services and does not depend on optional PI-07. Schedule required controls before the S17 paid pilot; see [PI-08 dependencies](PI/PI-08-admin-panel/README.md).
 
 ## Current release blockers to track
 
