@@ -4,6 +4,8 @@ Prepared: 4 October 2026
 Status: Proposed requirements for implementation; no admin panel has been built or deployed.  
 Companion: [Website Sales and Subscription Summary](AI-Product-Website-Sales-and-Subscription-Summary.md)
 
+Delivery plan added 4 October 2026: [combined website and admin roadmap](PI/README.md), [18-sprint status](_STATUS.md) and [source coverage](docs/01-module-feature-sprint-matrix.md). Admin foundations start in S03, offer controls in S06, full operator workflows in S13-S15 and integrated readiness in S17-S18. All implementation remains Planned.
+
 ## 1. Purpose and scope
 
 Create a private administration panel for the owner and authorized staff operating the AI subscription business described in the companion summary. It should support customer onboarding, subscription oversight, usage management, failed-job recovery, support, and service monitoring.

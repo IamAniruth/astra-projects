@@ -2,7 +2,9 @@
 
 Prepared: 30 September 2026  
 Status: Business and product planning summary; no website or payment system has been deployed.  
-Companion: [AI Product Opportunities 2026-2030](AI-Product-Opportunities-2026-2030.md)
+Companion: [AI Product Opportunities 2026-2030](../AI-Product-Opportunities-2026-2030.md)
+
+Delivery plan added 4 October 2026: [combined website and admin roadmap](PI/README.md), [18-sprint status](_STATUS.md) and [source coverage](docs/01-module-feature-sprint-matrix.md). All implementation remains Planned.
 
 ## 1. Executive summary
 
