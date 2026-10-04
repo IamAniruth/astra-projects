@@ -1,6 +1,6 @@
 # IP PI and sprint status
 
-Updated: 1 October 2026. **Documentation prepared; application implementation has not started.** Priority: Investigate first. No interviews, extraction benchmarks, installations or upstream test reruns were performed for this plan.
+Updated: 4 October 2026. **Documentation prepared; application implementation has not started.** Priority: Investigate first. There are 24 planned sprints, including PI-08 administration. No interviews, extraction benchmarks, installations or upstream test reruns were performed for this plan.
 
 Legend: Planned / In progress / Blocked / Accepted. Acceptance requires implementation and reviewer evidence; upstream completion never transfers to this product.
 
@@ -27,6 +27,11 @@ Legend: Planned / In progress / Blocked / Accepted. Acceptance requires implemen
 | PI-07 | [S19](PI/PI-07-controlled-improvement/S19-consented-feedback/sprint-plan.md) | Consented feedback dataset | Planned |
 | PI-07 | [S20](PI/PI-07-controlled-improvement/S20-model-improvement/sprint-plan.md) | Evaluated model improvement | Planned |
 | PI-07 | [S21](PI/PI-07-controlled-improvement/S21-qualified-expansion/sprint-plan.md) | Qualified expansion | Planned |
+| PI-08 | [S22](PI/PI-08-admin-panel/S22-admin-access-clients/sprint-plan.md) | Admin access and client management | Planned |
+| PI-08 | [S23](PI/PI-08-admin-panel/S23-admin-invoice-governance/sprint-plan.md) | Admin invoice and export governance | Planned |
+| PI-08 | [S24](PI/PI-08-admin-panel/S24-admin-commercial-operations/sprint-plan.md) | Admin commerce and operational readiness | Planned |
+
+PI-08 reuses existing domain services and does not depend on optional PI-07. Required administration controls precede the S17 paid pilot; S18 consumes final readiness evidence. See [PI-08 scheduling](PI/PI-08-admin-panel/README.md). All sprint statuses remain Planned.
 
 ## Open gates
 

@@ -8,8 +8,10 @@ Help accounting firms and finance teams upload invoices and purchase orders, ext
 
 ## Delivery documents
 
-- [Status: 21 planned sprints](_STATUS.md)
-- [Roadmap: six conditional core PIs and one optional improvement PI](PI/README.md)
+- [Status: 24 planned sprints](_STATUS.md)
+- [Roadmap: six conditional core PIs, one optional improvement PI and one admin PI](PI/README.md)
+- [Admin panel specification](docs/09-admin-panel-specification.md)
+- [PI-08 administration and S22-S24 sprint plans](PI/PI-08-admin-panel/README.md)
 - [Scope and investigation gates](docs/01-product-scope.md)
 - [Architecture and setup prerequisites](docs/02-architecture-and-setup.md)
 - [Module, feature and sprint coverage](docs/03-module-feature-sprint-matrix.md)

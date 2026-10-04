@@ -25,5 +25,10 @@ Each module links to detailed F01/F02 scope, T01-T04 tasks and acceptance. This 
 | M19 | Consented feedback dataset | IP-S19-F01/F02 | [S19](../PI/PI-07-controlled-improvement/S19-consented-feedback/sprint-plan.md) | Planned |
 | M20 | Evaluated model improvement | IP-S20-F01/F02 | [S20](../PI/PI-07-controlled-improvement/S20-model-improvement/sprint-plan.md) | Planned |
 | M21 | Qualified expansion | IP-S21-F01/F02 | [S21](../PI/PI-07-controlled-improvement/S21-qualified-expansion/sprint-plan.md) | Planned |
+| M22 | Admin access and client management | IP-S22-F01/F02 | [S22](../PI/PI-08-admin-panel/S22-admin-access-clients/sprint-plan.md) | Planned |
+| M23 | Admin invoice and export governance | IP-S23-F01/F02 | [S23](../PI/PI-08-admin-panel/S23-admin-invoice-governance/sprint-plan.md) | Planned |
+| M24 | Admin commerce and operational readiness | IP-S24-F01/F02 | [S24](../PI/PI-08-admin-panel/S24-admin-commercial-operations/sprint-plan.md) | Planned |
+
+M22-M24 implement the [admin specification](09-admin-panel-specification.md) through [PI-08](../PI/PI-08-admin-panel/README.md). They own administration screens, action orchestration and integrated acceptance over the original domain services; they do not create duplicate invoice, PO allocation, approval, job or billing authorities.
 
 Client isolation, provenance, audit and errors apply wherever documents are handled. Extraction/normalization changes require evaluation; post-approval edits require a new revision.
