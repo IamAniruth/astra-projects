@@ -25,5 +25,10 @@ Each module links to detailed F01/F02 scope, T01-T04 tasks and acceptance checks
 | M19 | Governed feedback and source improvement | CK-S19-F01/F02 | [S19](../PI/PI-07-controlled-improvement/S19-governed-feedback/sprint-plan.md) | Planned |
 | M20 | Evaluated retrieval and model improvement | CK-S20-F01/F02 | [S20](../PI/PI-07-controlled-improvement/S20-evaluated-improvement/sprint-plan.md) | Planned |
 | M21 | Qualified connectors and knowledge expansion | CK-S21-F01/F02 | [S21](../PI/PI-07-controlled-improvement/S21-qualified-expansion/sprint-plan.md) | Planned |
+| M22 | Admin identity, groups and access | CK-S22-F01/F02 | [S22](../PI/PI-08-admin-panel/S22-admin-identity-access/sprint-plan.md) | Planned |
+| M23 | Admin publication and private knowledge gaps | CK-S23-F01/F02 | [S23](../PI/PI-08-admin-panel/S23-admin-publication-private-gaps/sprint-plan.md) | Planned |
+| M24 | Admin commerce and operational readiness | CK-S24-F01/F02 | [S24](../PI/PI-08-admin-panel/S24-admin-commercial-operations/sprint-plan.md) | Planned |
+
+M22-M24 implement the [admin specification](09-admin-panel-specification.md) through [PI-08](../PI/PI-08-admin-panel/README.md). They own administration surfaces and integrated verification over existing services rather than duplicate identity, publication, private-gap, job or billing authorities.
 
 Permissions, publication/effective dates, source support and error handling apply throughout. Group/source revocation covers active jobs, histories, caches and gap reports. New retrieval/model/parser configurations need relevant evaluation; employee feedback never automatically changes shared policy.
