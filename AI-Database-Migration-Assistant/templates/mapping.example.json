@@ -1,0 +1,66 @@
+{
+  "schema_version": "proposed-1",
+  "status": "draft_not_executable",
+  "project_id": "example-only",
+  "mapping_version": 1,
+  "source": {
+    "profile": "mysql-8.4-innodb-proposed",
+    "schema_fingerprint": "TBD"
+  },
+  "target": {
+    "profile": "postgresql-16-proposed",
+    "schema_fingerprint": "TBD"
+  },
+  "entities": [
+    {
+      "source": "customers",
+      "target": "accounts",
+      "source_key": [
+        "tenant_id",
+        "id"
+      ],
+      "target_key": "id",
+      "key_strategy": "allocate_and_persist_tenant_scoped_id_map",
+      "fields": [
+        {
+          "source": "full_name",
+          "target": "display_name",
+          "operation": "copy",
+          "evidence_refs": [
+            "TBD-source-and-target-code"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "orders",
+      "target": "purchases",
+      "source_key": [
+        "tenant_id",
+        "id"
+      ],
+      "fields": [
+        {
+          "source": "status_code",
+          "target": "status",
+          "operation": "enum_lookup",
+          "values": null,
+          "evidence_refs": []
+        }
+      ]
+    }
+  ],
+  "unresolved_questions": [
+    {
+      "id": "Q-001",
+      "severity": "critical",
+      "question": "What does every order status code mean in the old application?"
+    }
+  ],
+  "coverage_complete": false,
+  "review": {
+    "decision": "not_reviewed",
+    "actor": null
+  },
+  "execution_authorization": null
+}

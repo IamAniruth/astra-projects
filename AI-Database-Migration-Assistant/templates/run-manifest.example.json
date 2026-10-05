@@ -1,0 +1,33 @@
+{
+  "schema_version": "proposed-1",
+  "status": "not_run",
+  "run_id": "example-only",
+  "workspace_id": "TBD",
+  "project_id": "TBD",
+  "plan_hash": null,
+  "mapping_hash": null,
+  "source_snapshot_id": null,
+  "source_schema_hash": null,
+  "target_schema_hash": null,
+  "source_repository_commit": null,
+  "target_repository_commit": null,
+  "compiler_version": null,
+  "connector_versions": {},
+  "model_checkpoint_hash": null,
+  "tokenizer_hash": null,
+  "authorization_ref": null,
+  "secret_refs": [],
+  "target_identity": null,
+  "fencing_epoch": null,
+  "last_target_commit_receipt": null,
+  "dispositions": {
+    "migrated": null,
+    "excluded": null,
+    "quarantined": null
+  },
+  "validation_report_ref": null,
+  "restore_evidence_ref": null,
+  "cutover_state": "not_started",
+  "target_writes_enabled": false,
+  "reviewer_decision": "not_reviewed"
+}

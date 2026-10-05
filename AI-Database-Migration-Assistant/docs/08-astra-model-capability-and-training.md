@@ -1,0 +1,49 @@
+# DM Astra model capability development
+
+Detailed companion: [dataset percentages, source selection, parameter sizes, training/inference configuration and quality targets](16-local-llm-training-datasets-and-configuration.md). Its numerical mixes and configurations are proposed experiments; this capability plan and the independent release gates remain authoritative for promotion.
+
+## Documented starting point
+
+The referenced PI status identifies the served checkpoint as checkpoint-dolly-54m-12k, 53,870,592 parameters. Larger 684M-1.25B experiments are described as capacity probes rather than fully trained capable models. The status also records limited instruction-answer quality and no demonstrated arbitrary customer-database migration benchmark. These are documentation observations, not a fresh runtime inspection. See [sources](14-references-and-current-state.md).
+
+This plan follows the owner's intent to improve Astra's own local model. It does not silently replace it with an external pretrained or cloud model. Any such option would be a separate owner decision. No model size, training duration or hardware purchase guarantees the required skill.
+
+## Skills to develop
+
+| Skill | Input/output task | Evaluation |
+|---|---|---|
+| Schema comprehension | Identify keys, constraints, types, entities and cardinality | Exact structured facts against catalog truth |
+| Code grounding | Link ORM/query/business logic to database concepts | Correct evidence paths and meanings on unseen repositories |
+| Semantic mapping | Propose entity/field/status rules with evidence | Execution-equivalent mappings, not only similar text |
+| Ambiguity detection | Abstain or ask a minimal targeted question | Critical ambiguous cases never executed automatically |
+| Plan composition | Emit the bounded mapping language | Syntax, allowed-operation, type and dependency checks |
+| Error diagnosis | Explain rehearsal failure and propose bounded correction | Independent invariant improvement without relaxed checks |
+| Report generation | Explain actual results and unresolved limits | Every numerical claim traced to evidence |
+
+## Development sequence
+
+1. Establish the deterministic runner and frozen fixtures with human-authored mappings. They are both a useful product slice and a measurement harness.
+2. Run the current model unchanged on unseen migration tasks. Record invalid outputs, unsupported rules, hallucinated fields and correct abstentions. Expectation is unknown; do not fabricate a score.
+3. Build a licensed schema/code/mapping corpus with reviewed positive and negative examples. Include wrong mappings and explanations, not just ideal SQL.
+4. Add retrieval of relevant schema/code evidence and constrained structured output. Validate externally even if generation is constrained.
+5. Train or instruction-tune within Astra's supported training pipeline, preserving tokenizer/checkpoint identity and existing promotion gates. Introduce one measured change at a time.
+6. Evaluate held-out schema families and repositories. Compare human-template baseline, unchanged model, retrieval-only and trained candidate.
+7. Promote a candidate only for the specific supported mapping families that pass. Keep unqualified tasks in assisted mode.
+
+## Data design and isolation
+
+Use synthetic business databases and permissively licensed examples with recorded provenance. Customer migrations are not training material by default. Obtain separate permission before retaining or training on any customer-derived sample; masking does not automatically remove all sensitive information.
+
+Split by customer/repository/schema lineage before generating variants; renamed copies of one schema must not cross training and test boundaries. Keep frozen challenge tasks inaccessible to training and repair loops. Validation can guide model development; a locked test set is used only at registered evaluation points. Record contamination checks and hashes.
+
+Examples must cover tenant-scoped composite keys, currency precision, timezone ambiguity, enum drift, merges/splits, cycles, deletes, invalid dates, duplicate emails, missing target defaults and contradictory code evidence. Each example includes oracle rules, expected dispositions, independent invariants and allowed clarifying answers.
+
+## Runtime adapter
+
+Proposed request: schema/evidence references, bounded retrieved context, supported DSL version and output budget. Proposed response: mapping candidates, evidence references, unresolved questions and limitations. Parse JSON, validate schema, resolve every referenced object and reject unknown operations before compilation. Temperature/seed alone is not a determinism guarantee; store the accepted mapping and execute that immutable artifact.
+
+The model receives no shell access or database write credentials. An agent may request allowlisted discovery or disposable rehearsal tools through a policy service. The tool executor enforces authority independently of text generated by the model.
+
+## Model scaling decisions
+
+Choose size and context length from actual task quality and latency on the chosen host. GPU memory depends on weights, precision, context/KV cache and concurrency; training also needs gradients, optimizer and activation memory. Inference and training budgets are different. A large database does not need to fit inside model memory. Existing Astra GPU fit tests cannot determine this product's migration accuracy.
